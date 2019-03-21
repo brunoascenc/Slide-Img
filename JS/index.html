@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img name = "slide" width="450" height="250">
+
+
+    <script>
+        let i = 0
+        let imagens = []
+        const tempo = 1000
+
+        imagens[0] = 'home-ace.jpg'
+        imagens[1] = 'woman.jpg'
+        imagens[2] = 'woman2.jpg'
+        imagens[3] = 'men.jpg'
+        imagens[4] = 'men2.jpg'
+
+        function mudarImagem(){
+            document.slide.src = imagens[i]
+
+            if(i < imagens.length - 1){
+                i++
+            } else {
+                i = 0
+            }
+
+            setTimeout("mudarImagem()", tempo)
+        }
+        window.onload = mudarImagem
+    </script>
+</body>
+</html>
